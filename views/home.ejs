@@ -6,6 +6,7 @@
 
 <%contentPosts.forEach(function(data){ %>
 <h1><%=data.Title%></h1>
-<p><%=data.Description%></p>
+<p><%=data.Description.substring(0,100)%>... <a href="posts/:<%=data.Title%>">Read More</a></p>
+
 <% }) %>
 <%- include('partials/footer') -%>
